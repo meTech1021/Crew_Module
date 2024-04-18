@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -27,14 +27,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CrudService from "services/cruds-service";
 import AuthService from "services/auth-service";
 
-// The Material Dashboard 2 PRO React main context
-const MaterialUI = createContext();
+// The Crew Module React main context
+const CrewModule = createContext();
 
 // the authentication context
 export const AuthContext = createContext({
   isAuthenticated: false,
   login: () => {},
-  register: () => {},
   logout: () => {},
   getCurrentUser: () => {},
   getRole: () => {},
@@ -65,7 +64,7 @@ const AuthContextProvider = ({ children }) => {
     console.log(newToken, 'newToken')
     localStorage.setItem("token", newToken);
     setIsAuthenticated(true);
-    navigate("/dashboard/analytics");
+    navigate("/user-profile");
   };
 
   const logout = () => {
@@ -96,11 +95,8 @@ const AuthContextProvider = ({ children }) => {
       if (roleId === "1") {
         return "admin";
       }
-      if (roleId === "2") {
-        return "creator";
-      }
-      if (roleId === 3) {
-        return "member";
+      if (roleId === 2) {
+        return "simple";
       }
       return res.included[0].attributes.name;
     } catch (err) {
@@ -117,9 +113,9 @@ const AuthContextProvider = ({ children }) => {
 };
 
 // Setting custom name for the context which is visible on react dev tools
-MaterialUI.displayName = "MaterialUIContext";
+CrewModule.displayName = "CrewModuleContext";
 
-// Material Dashboard 2 PRO React reducer
+// Crew Module React reducer
 function reducer(state, action) {
   switch (action.type) {
     case "MINI_SIDENAV": {
@@ -158,7 +154,7 @@ function reducer(state, action) {
   }
 }
 
-// Material Dashboard 2 PRO React context provider
+// Crew Module React context provider
 function CrewModuleControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -177,12 +173,12 @@ function CrewModuleControllerProvider({ children }) {
 
   const value = useMemo(() => [controller, dispatch], [controller, dispatch]);
 
-  return <MaterialUI.Provider value={value}>{children}</MaterialUI.Provider>;
+  return <CrewModule.Provider value={value}>{children}</CrewModule.Provider>;
 }
 
-// Material Dashboard 2 PRO React custom hook for using context
+// Crew Module React custom hook for using context
 function useCrewModuleController() {
-  const context = useContext(MaterialUI);
+  const context = useContext(CrewModule);
 
   if (!context) {
     throw new Error(

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -19,7 +19,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Ability } from "@casl/ability";
 import App from "App";
 
-// Material Dashboard 2 PRO React Context Provider
+// Crew Module React Context Provider
 import { CrewModuleControllerProvider, AuthContextProvider } from "context";
 import { AbilityContext } from "Can";
 

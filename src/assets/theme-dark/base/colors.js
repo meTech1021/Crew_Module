@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -14,9 +14,9 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base colors for the Material Dashboard 2 PRO React.
+ * The base colors for the Crew Module React.
  * You can add new color using this file.
- * You can customized the colors for the entire Material Dashboard 2 PRO React using thie file.
+ * You can customized the colors for the entire Crew Module React using thie file.
  */
 
 const colors = {

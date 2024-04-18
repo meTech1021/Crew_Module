@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -18,7 +18,7 @@ import { useState, useEffect } from "react";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 
 // Settings page components
@@ -33,7 +33,6 @@ import getId from "services/helper-service";
 import Footer from "utils/Footer";
 
 function UserProfile() {
-  const [isDemo, setIsDemo] = useState(false);
   const [user, setUser] = useState({
     id: "",
     name: "",
@@ -70,13 +69,13 @@ function UserProfile() {
             <MDBox mb={3}>
               <Grid container spacing={3}>
                 <Grid item xs={12}>
-                  <Header user={user} isDemo={isDemo} />
+                  <Header user={user} />
                 </Grid>
                 <Grid item xs={12}>
-                  <BasicInfo user={user} isDemo={isDemo} />
+                  <BasicInfo user={user} />
                 </Grid>
                 <Grid item xs={12}>
-                  <ChangePassword user={user} isDemo={isDemo} />
+                  <ChangePassword user={user} />
                 </Grid>
               </Grid>
             </MDBox>

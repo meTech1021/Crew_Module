@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -20,7 +20,7 @@ import Table from "@mui/material/Table";
 import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
@@ -32,7 +32,7 @@ import BaseLayout from "layouts/pages/account/components/BaseLayout";
 import logoCT from "assets/images/logo-ct.png";
 import logoCTDark from "assets/images/logo-ct-dark.png";
 
-// Material Dashboard 2 PRO React context
+// Crew Module React context
 import { useMaterialUIController } from "context";
 
 function Invoice() {
@@ -261,7 +261,7 @@ function Invoice() {
                       <TableRow>
                         <MDBox component="td" textAlign="left" p={1} sx={borderBottom}>
                           <MDTypography variant="body2" color="text" fontWeight="regular">
-                            Material Dashboard 2 PRO
+                            Crew Module
                           </MDTypography>
                         </MDBox>
                         <MDBox

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
@@ -15,7 +15,7 @@ import FormField from "layouts/pages/account/components/FormField";
 
 import AuthService from "services/auth-service";
 
-function BasicInfo({ user, isDemo }) {
+function BasicInfo({ user }) {
   const [info, setInfo] = useState({ username: "" });
   const [notification, setNotification] = useState({ value: false, color: "info", message: "" });
 
@@ -73,10 +73,8 @@ function BasicInfo({ user, isDemo }) {
 
     setNotification({
       value: true,
-      color: isDemo ? "secondary" : "info",
-      message: isDemo
-        ? "You can not update the username in demo version"
-        : "Your profile has been updated",
+      color: "info",
+      message: "Your profile has been updated",
     });
   };
 

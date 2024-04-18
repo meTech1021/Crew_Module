@@ -5,7 +5,7 @@ import UserProfile from "cruds/user-profile";
 import RoleManagement from "cruds/role-managament";
 import UserManagement from "cruds/user-management";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDAvatar from "components/MDAvatar";
 
 const routes = [

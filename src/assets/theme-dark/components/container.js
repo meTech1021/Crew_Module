@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -13,10 +13,10 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// Material Dashboard 2 PRO React base styles
+// Crew Module React base styles
 import breakpoints from "assets/theme-dark/base/breakpoints";
 
-// Material Dashboard 2 PRO React helper functions
+// Crew Module React helper functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const {

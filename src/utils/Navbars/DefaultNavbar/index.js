@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /**
 =========================================================
-* Material Dashboard 2 PRO React TS - v1.0.0
+* Crew Module React TS - v1.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-2-pro-react-ts
@@ -31,20 +31,20 @@ import Divider from "@mui/material/Divider";
 import MuiLink from "@mui/material/Link";
 import Container from "@mui/material/Container";
 
-// Material Dashboard 2 PRO React TS components
+// Crew Module React TS components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
-// Material Dashboard 2 PRO React TS examples components
+// Crew Module React TS examples components
 import DefaultNavbarDropdown from "utils/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "utils/Navbars/DefaultNavbar/DefaultNavbarMobile";
 import DefaultNavbarLink from "utils/Navbars/DefaultNavbar/DefaultNavbarLink";
 
-// Material Dashboard 2 PRO React TS Base Styles
+// Crew Module React TS Base Styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-// Material Dashboard 2 PRO React context
+// Crew Module React context
 import { useCrewModuleController, AuthContext } from "context";
 
 function DefaultNavbar({ routes, brand, transparent, light, action }) {

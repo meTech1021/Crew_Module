@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -28,12 +28,12 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 import MDInput from "components/MDInput";
 import MDBadge from "components/MDBadge";
 
-// Material Dashboard 2 PRO React examples
+// Crew Module React examples
 import NotificationItem from "utils/Items/NotificationItem";
 
 // Custom styles for DashboardNavbar
@@ -46,7 +46,7 @@ import {
   navbarMobileMenu,
 } from "utils/Navbars/DashboardNavbar/styles";
 
-// Material Dashboard 2 PRO React context
+// Crew Module React context
 import {
   useCrewModuleController,
   setTransparentNavbar,

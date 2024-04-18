@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
 * Copyright 2022 Creative Tim (https://www.creative-tim.com)
@@ -15,7 +15,7 @@ import { useState, useEffect, useContext } from "react";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
@@ -27,7 +27,7 @@ import AuthService from "services/auth-service";
 import CrudService from "services/cruds-service";
 import { AuthContext } from "context";
 
-function Header({ user, isDemo }) {
+function Header({ user }) {
   const authContext = useContext(AuthContext);
   const [image, setImage] = useState("");
   const [fileState, setFileState] = useState(null);
@@ -75,14 +75,6 @@ function Header({ user, isDemo }) {
     e.preventDefault();
 
     try {
-      if (isDemo) {
-        setNotification({
-          value: true,
-          color: "secondary",
-          message: "You can not update the profile image in demo version",
-        });
-        return null;
-      }
       const { url } = await CrudService.imageUpload(fileState, id);
       let userData;
       // set new user data for call

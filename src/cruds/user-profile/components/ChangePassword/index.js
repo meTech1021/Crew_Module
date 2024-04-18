@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -19,7 +19,7 @@ import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
@@ -28,7 +28,7 @@ import MDAlert from "components/MDAlert";
 
 import AuthService from "services/auth-service";
 
-function ChangePassword({ user, isDemo }) {
+function ChangePassword({ user }) {
   const passwordRequirements = ["Min 8 characters", "Change it often"];
 
   const [info, setInfo] = useState({ newPassword: "", confirmPassword: "" });
@@ -58,56 +58,49 @@ function ChangePassword({ user, isDemo }) {
     e.preventDefault();
 
     // validation
-    if (isDemo) {
-      setNotification({
-        value: true,
-        color: "secondary",
-        message: "You can not update the password in demo version",
-      });
-      return null;
-    } else {
-      if (info.newPassword.trim().length < 8) {
-        setErrors({ ...errors, newPassError: true });
-        return;
-      }
 
-      if (info.confirmPassword.trim() !== info.newPassword.trim()) {
-        setErrors({ ...errors, confirmPassError: true });
-        return;
-      }
-
-      let userData;
-      // set new user data for call
-      // issue here in the get profile the password is not coming so can't verify it and the password needs to have the new password set to save it
-      userData = {
-        data: {
-          type: "profile",
-          attributes: {
-            password: info.newPassword,
-            password_new: info.newPassword,
-            password_confirmation: info.confirmPassword,
-            profile_image: user.profile_image ?? null,
-          },
-        },
-      };
-
-      // call api for update
-      await AuthService.updateProfile(JSON.stringify(userData));
-
-      setInfo({ newPassword: "", confirmPassword: "" });
-
-      // reset errors
-      setErrors({
-        newPassError: false,
-        confirmPassError: false,
-      });
-
-      setNotification({
-        value: true,
-        color: "info",
-        message: "Your profile has been updatedn",
-      });
+    if (info.newPassword.trim().length < 8) {
+      setErrors({ ...errors, newPassError: true });
+      return;
     }
+
+    if (info.confirmPassword.trim() !== info.newPassword.trim()) {
+      setErrors({ ...errors, confirmPassError: true });
+      return;
+    }
+
+    let userData;
+    // set new user data for call
+    // issue here in the get profile the password is not coming so can't verify it and the password needs to have the new password set to save it
+    userData = {
+      data: {
+        type: "profile",
+        attributes: {
+          password: info.newPassword,
+          password_new: info.newPassword,
+          password_confirmation: info.confirmPassword,
+          profile_image: user.profile_image ?? null,
+        },
+      },
+    };
+
+    // call api for update
+    await AuthService.updateProfile(JSON.stringify(userData));
+
+    setInfo({ newPassword: "", confirmPassword: "" });
+
+    // reset errors
+    setErrors({
+      newPassError: false,
+      confirmPassError: false,
+    });
+
+    setNotification({
+      value: true,
+      color: "info",
+      message: "Your profile has been updatedn",
+    });
+  
   };
 
   const renderPasswordRequirements = passwordRequirements.map((item, key) => {

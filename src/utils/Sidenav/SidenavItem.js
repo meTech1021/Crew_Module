@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -22,13 +22,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 
 // Custom styles for the SidenavItem
 import { item, itemContent, itemArrow } from "utils/Sidenav/styles/sidenavItem";
 
-// Material Dashboard 2 PRO React contexts
+// Crew Module React contexts
 import { useCrewModuleController } from "context";
 
 function SidenavItem({ color, name, active, nested, children, open, ...rest }) {

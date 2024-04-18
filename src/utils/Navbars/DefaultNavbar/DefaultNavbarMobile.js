@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -26,11 +26,11 @@ import Collapse from "@mui/material/Collapse";
 import MuiLink from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React TS components
+// Crew Module React TS components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Dashboard 2 PRO React TS exampless
+// Crew Module React TS exampless
 import DefaultNavbarDropdown from "utils/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarLink from "utils/Navbars/DefaultNavbar/DefaultNavbarLink";
 import { AuthContext } from "context";

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -25,11 +25,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDTypography from "components/MDTypography";
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// Crew Module React examples
 import SalesTableCell from "utils/Tables/SalesTable/SalesTableCell";
 
 function SalesTable({ title, rows, shadow }) {

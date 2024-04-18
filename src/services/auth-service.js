@@ -2,7 +2,7 @@ import HttpService from "./http.service";
 
 class AuthService {
   login = async (payload) => {
-    const loginEndpoint = "login";
+    const loginEndpoint = "api/tokens";
     return await HttpService.post(loginEndpoint, payload);
   };
 

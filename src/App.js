@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 PRO React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useState, useEffect, useMemo, useContext } from "react";
 
 // react-router components
@@ -26,31 +11,28 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 import MDAvatar from "components/MDAvatar";
 
-// Material Dashboard 2 PRO React components
+// Crew Module React components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// Crew Module React examples
 import Sidenav from "utils/Sidenav";
 import Configurator from "utils/Configurator";
 
-// Material Dashboard 2 PRO React themes
+// Crew Module React themes
 import theme from "assets/theme";
-import themeRTL from "assets/theme/theme-rtl";
 
-// Material Dashboard 2 PRO React Dark Mode themes
+// Crew Module React Dark Mode themes
 import themeDark from "assets/theme-dark";
-import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
 // RTL plugins
 import rtlPlugin from "stylis-plugin-rtl";
-import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
-// Material Dashboard 2 PRO React routes
+// Crew Module React routes
 import routes from "routes";
 import crudRoutes from "routes/crud";
 
-// Material Dashboard 2 PRO React contexts
+// Crew Module React contexts
 import { useCrewModuleController, setMiniSidenav, setOpenConfigurator, AuthContext } from "context";
 
 import { getPermissions } from "config/Permissions";

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v2.1.0
+* Crew Module React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
@@ -21,7 +21,7 @@ import "react-quill/dist/quill.snow.css";
 // Custom styles for the MDEditor
 import MDEditorRoot from "components/MDEditor/MDEditorRoot";
 
-// Material Dashboard 2 PRO React context
+// Crew Module React context
 import { useCrewModuleController } from "context";
 
 function MDEditor(props) {
