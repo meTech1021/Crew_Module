@@ -25,7 +25,15 @@ export class HttpService {
   delete = async (url) => await this.request(this.getOptionsConfig("delete", url));
 
   getOptionsConfig = (method, url, data) => {
-    return { method, url, data, headers: { "Content-Type": "application/vnd.api+json" } };
+    const options = { method, url, data, headers: { "Content-Type": "application/vnd.api+json" } };
+    
+    // Check if Authorization token is available in the local storage
+    const authToken = localStorage.getItem("token");
+    if (authToken) {
+      options.headers.Authorization = `Bearer ${authToken}`;
+    }
+
+    return options;
   };
 
   request(options) {

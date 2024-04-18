@@ -8,7 +8,7 @@ class CrudService {
   };
 
   getUsers = async () => {
-    const usersEndpoint = "users?include=Role,Organization";
+    const usersEndpoint = "crewlist";
     return await HttpService.get(usersEndpoint);
   };
 
@@ -28,7 +28,7 @@ class CrudService {
   };
 
   getUserWithPermissions = async (id) => {
-    const endpoint = `users/${id}?include=Role,Role.Permission,Organization`;
+    const endpoint = `users/${id}`;
     return await HttpService.get(endpoint);
   };
 

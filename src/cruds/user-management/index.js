@@ -46,7 +46,6 @@ import getId from "services/helper-service";
 
 function UserManagement() {
   let { state } = useLocation();
-  const [isDemo, setIsDemo] = useState(false);
   const [user, setUsers] = useState([]);
   const [roles, setRoles] = useState([]);
   const [notification, setNotification] = useState({
@@ -64,7 +63,6 @@ function UserManagement() {
       const response = await CrudService.getUsers();
       setUsers(response.data);
       setRoles(response.included);
-      setIsDemo(process.env.REACT_APP_IS_DEMO === "true");
     })();
     document.title = `Crew Module | Users`;
   }, []);
@@ -79,7 +77,6 @@ function UserManagement() {
 
   useEffect(() => {
     setTableData(getRows(user));
-    console.log(getRows(user), 'tableData')
   }, [user]);
 
   useEffect(() => {
@@ -185,29 +182,19 @@ function UserManagement() {
           return (
             <MDBox display="flex" alignItems="center">
               <Can I="edit" this={subject("users", info.cell.row.original)}>
-                {isDemo ? ((
-                    <Tooltip
-                      title="Edit User"
-                      onClick={() => clickEditHandler(info.cell.row.original.id)}
-                    >
-                      <IconButton>
-                        <EditIcon />
-                      </IconButton>
-                    </Tooltip>
-                  )
-                ) : (
-                  <Tooltip
-                    title="Edit User"
-                    onClick={() => clickEditHandler(info.cell.row.original.id)}
-                  >
-                    <IconButton>
-                      <EditIcon />
-                    </IconButton>
-                  </Tooltip>
-                )}
+              (
+                <Tooltip
+                  title="Edit User"
+                  onClick={() => clickEditHandler(info.cell.row.original.id)}
+                >
+                  <IconButton>
+                    <EditIcon />
+                  </IconButton>
+                </Tooltip>
+              )
               </Can>
               <Can I="delete" this={subject("users", info.cell.row.original)}>
-                {isDemo ? ((
+              (
                   <Tooltip
                     title="Delete User"
                     onClick={(e) => clickDeleteHandler(e, info.cell.row.original.id)}
@@ -216,17 +203,7 @@ function UserManagement() {
                       <DeleteIcon />
                     </IconButton>
                   </Tooltip>
-                )
-                ) : (
-                    <Tooltip
-                      title="Delete User"
-                      onClick={(e) => clickDeleteHandler(e, info.cell.row.original.id)}
-                    >
-                      <IconButton>
-                        <DeleteIcon />
-                      </IconButton>
-                    </Tooltip>
-                )}
+              )
               </Can>
             </MDBox>
           );

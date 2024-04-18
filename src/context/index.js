@@ -64,7 +64,7 @@ const AuthContextProvider = ({ children }) => {
     console.log(newToken, 'newToken')
     localStorage.setItem("token", newToken);
     setIsAuthenticated(true);
-    navigate("/user-profile");
+    navigate("/user-management");
   };
 
   const logout = () => {
