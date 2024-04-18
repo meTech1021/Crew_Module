@@ -128,22 +128,18 @@ function UserManagement() {
 
   const getRows = (info) => {
     let updatedInfo = info.map((row) => {
-      let roleId = row.attributes.Role?.id;
-      let roleName = row.attributes.Role?.name;
+      let roleId = row?.Role?.id;
+      let roleName = row?.Role?.name;
       return {
         type: "users",
-        id: row.id,
-        image: row.attributes.profile_image,
-        name: row.attributes.name,
-        email: row.attributes.email,
-        phone: row.attributes.phone,
-        is_verified: row.attributes.is_verified,
-        organization: row.attributes.Organization?.name,
+        id: row?.id,
+        image: row?.profile_image,
+        name: row?.name,
+        birthdate: row?.birthdate,
         role: roleName,
-        created_at: row.attributes.created_at,
       };
     });
-    console.log(updatedInfo, 'row.attributes')
+    console.log(updatedInfo, 'row')
     return updatedInfo;
   };
 
@@ -163,17 +159,8 @@ function UserManagement() {
           );
         },
       },
-      { Header: "name", accessor: "name", width: "15%" },
-      { Header: "email", accessor: "email", width: "10%" },
-      { Header: "phone", accessor: "phone", width: "10%" },
-      { Header: "organization", accessor: "organization", width: "10%" },
-      { Header: "role", accessor: "role", width: "15%" },
-      { Header: "Verified", accessor: "is_verified", width: "15%",
-        Cell: ({ cell: { value } }) => {
-          return value ? "Yes" : "No"; // Convert boolean value to string representation
-        }
-      },
-      { Header: "created at", accessor: "created_at", width: "15%" },
+      { Header: "Name", accessor: "name", width: "15%" },
+      { Header: "Birth Date", accessor: "birthdate", width: "15%" },
       {
         Header: "actions",
         disableSortBy: true,
